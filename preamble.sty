@@ -1,0 +1,141 @@
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{Preamble}[2010/07/28 BBischof's custom LaTeX style]
+
+% Now paste your code from the preamble here
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{proof}
+%\usepackage[lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm]{geometry}
+\usepackage{tikz-cd}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{enumerate}
+% \usepackage{multicol}
+\usepackage{thm-restate}
+% \usepackage{tabularx}
+
+\usepackage{stackengine}
+
+\newcommand{\ts}[2]{{_{#1}}\!\times_{#2}\!}
+
+\usepackage[capitalize]{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\o}{\circ}
+\newcommand{\anc}{\varrho}
+\newcommand{\tot}[1]{\overline{#1}}
+\newcommand{\bas}[1]{\underline{#1}}
+\newcommand{\prolong}{A \ts{\anc}{T\pi} TA}
+\newcommand{\prol}{\mathcal{L}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+%%%%%%%%%%%%%%% Notation for specific categories/theories
+
+\newcommand{\tabunact}[0]{\mathcal{T}_{\mathsf{ABun}}\mathsf{act}} % Additive bundle actegories
+\newcommand{\affcatl}{\mathsf{AffCat}_{\mathsf{Lax}}} %Affine tangent categories and lax functors
+
+
+\newcommand{\tabun}[0]{\mathcal{T}_{\mathsf{ABun}}} %Theory of additive bundles
+\newcommand{\taff}[0]{\mathcal{T}_{\mathsf{Aff}}} %Theory of flat, torsion-free affine connections
+\newcommand{\tdiff}[0]{\mathcal{T}_{\mathcal{D}}} %Theory of differential objects
+
+%% systems of arities
+\newcommand{\tangar}{{\mathcal{D}^+}} % Cartesian tangent arities
+\newcommand{\tanginc}[0]{r} % the inclusion for cartesian tangent arities
+\newcommand{\dpoint}{{\mathcal{D}^{*}}} % Pointed tangent arities
+\renewcommand{\d}[0]{\mathcal{D}}
+
+
+%normal 1-categories
+\newcommand{\s}[0]{\mathsf{Set}}
+\newcommand{\wone}[0]{\mathsf{Weil}_1}
+\newcommand{\weil}[0]{\mathsf{Weil}}
+% Weil spaces...used a single letter because it gets used a LOT
+\newcommand{\w}[0]{\mathcal{W}^{\mathsf{microl}}}
+\newcommand{\W}[0]{\mathcal{W}}
+
+
+%%%%%%%%%%%%%%% Notation for modifiers
+
+% X-objects in
+\newcommand{\abun}{\mathsf{ABun}} % Additive bundles in -
+\newcommand{\geom}[0]{\mathsf{Geom}} % Connections in -
+\newcommand{\aff}[0]{\mathsf{Aff}} % Flat, torsion-free connections in -
+
+% Algebras over T, strict algebras, ARITY 1
+\newcommand{\alg}[1]{{#1}^{\mathsf{alg}}}
+\newcommand{\salg}[1]{{#1}^{\mathsf{alg}!}}
+
+%Differential objects linear and smooth maps
+\newcommand{\Diff}[0]{\mathsf{Diff}}
+\newcommand{\Dlin}[0]{\mathsf{DLin}}
+
+%sketches
+\newcommand{\ob}[0]{\mathsf{ob}}
+\newcommand{\ar}[0]{\mathsf{ar}}
+%%%%%%%%%%%%%%% Mathcal/bb (lowercase cal, uppercase BB)
+\renewcommand{\k}[0]{\mathcal{K}}
+\renewcommand{\c}[0]{\mathcal{C}}
+\renewcommand{\a}[0]{\mathcal{A}}
+\renewcommand{\b}[0]{\mathcal{B}}
+\renewcommand{\j}[0]{\mathcal{J}}
+\renewcommand{\l}[0]{\mathcal{L}}
+\renewcommand{\u}[0]{\mathcal{U}}
+\renewcommand{\v}[0]{\mathcal{V}}
+\newcommand{\q}[0]{\mathcal{Q}}
+
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\D}[0]{\mathbb{D}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\T}[0]{\mathbb{T}}
+
+%theories
+\newcommand{\sh}[0]{\mathcal{S}}
+\renewcommand{\th}[0]{\mathcal{T}}
+
+%%%%%%%%%%%%%% Natural transformations
+\newcommand{\assoc}[0]{a} % For a monoidal cat
+\newcommand{\tnat}[0]{\alpha} % The standard notation for the (F,a) tangent functor
+\newcommand{\x}[0]{\times}
+\newcommand{\ox}[0]{\otimes}
+\newcommand{\phat}[0]{\hat{p}}
+%\DeclareFontFamily{U}{min}{}
+%\DeclareFontShape{U}{min}{m}{n}{<-> udmj30}{}
+%\newcommand\yon{\!\text{\usefont{U}{min}{m}{n}\symbol{'210}}\!}
+\newcommand{\yon}[0]{\mathcal{Y}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Construction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\clone}[2]{\Phi_{#1}[{#2}]}
+
+% Finally, we'll use \endinput to indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
+\endinput
