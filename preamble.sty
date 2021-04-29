@@ -11,9 +11,9 @@
 %%%%%%%%%%%%%%% Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{proof}
-%\usepackage[lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm]{geometry}
+\usepackage[lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm]{geometry}
 \usepackage{tikz-cd}
-\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amsmath, amsthm}
 \usepackage{hyperref}
 \usepackage{cite}
 \usepackage{enumerate}
@@ -32,16 +32,25 @@
 %%%%%%%%%%%%%%% Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
-\newtheorem{proposition}{Proposition}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem{notation}{Notation}
-\newtheorem{lemma}{Lemma}
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}
-\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{notation}{Notation}[section]
+
+% \newtheorem{theorem}{Theorem}[subsection]
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \theoremstyle{definition}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \theoremstyle{remark}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{example}[theorem]{Example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Commands
@@ -53,8 +62,7 @@
 \newcommand{\bas}[1]{\underline{#1}}
 \newcommand{\prolong}{A \ts{\anc}{T\pi} TA}
 \newcommand{\prol}{\mathcal{L}}
-\newcommand{\<}{\langle}
-\renewcommand{\>}{\rangle}
+
 %%%%%%%%%%%%%%% Notation for specific categories/theories
 
 \newcommand{\tabunact}[0]{\mathcal{T}_{\mathsf{ABun}}\mathsf{act}} % Additive bundle actegories
@@ -77,9 +85,13 @@
 \newcommand{\wone}[0]{\mathsf{Weil}_1}
 \newcommand{\weil}[0]{\mathsf{Weil}}
 % Weil spaces...used a single letter because it gets used a LOT
-\newcommand{\w}[0]{\mathcal{W}^{\mathsf{microl}}}
-\newcommand{\W}[0]{\mathcal{W}}
+\newcommand{\w}[0]{{m\mathsf{Set}}}
+\newcommand{\W}[0]{{m\mathsf{Set}}}
 
+%%% 2-categories
+\newcommand{\cat}{\mathsf{Cat}}
+\newcommand{\mcat}{\mathsf{MCat}}
+\newcommand{\smcat}{\mathsf{SMCat}}
 
 %%%%%%%%%%%%%%% Notation for modifiers
 
@@ -99,10 +111,15 @@
 %sketches
 \newcommand{\ob}[0]{\mathsf{ob}}
 \newcommand{\ar}[0]{\mathsf{ar}}
+
+\newcommand{\anchor}{\mathcal{P}}
 %%%%%%%%%%%%%%% Mathcal/bb (lowercase cal, uppercase BB)
 \renewcommand{\k}[0]{\mathcal{K}}
 \renewcommand{\c}[0]{\mathcal{C}}
 \renewcommand{\a}[0]{\mathcal{A}}
+\newcommand{\e}[0]{\mathcal{E}}
+\newcommand{\m}[0]{\mathcal{M}}
+\newcommand{\g}[0]{\mathcal{G}}
 \renewcommand{\b}[0]{\mathcal{B}}
 \renewcommand{\j}[0]{\mathcal{J}}
 \renewcommand{\l}[0]{\mathcal{L}}
@@ -115,7 +132,7 @@
 \newcommand{\N}[0]{\mathbb{N}}
 \newcommand{\R}[0]{\mathbb{R}}
 \newcommand{\T}[0]{\mathbb{T}}
-
+\newcommand{\Z}[0]{\mathbb{Z}}
 %theories
 \newcommand{\sh}[0]{\mathcal{S}}
 \renewcommand{\th}[0]{\mathcal{T}}
@@ -131,6 +148,9 @@
 %\newcommand\yon{\!\text{\usefont{U}{min}{m}{n}\symbol{'210}}\!}
 \newcommand{\yon}[0]{\mathcal{Y}}
 
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Construction
@@ -139,3 +159,5 @@
 
 % Finally, we'll use \endinput to indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
 \endinput
+
+
